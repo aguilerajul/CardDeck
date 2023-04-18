@@ -1,0 +1,144 @@
+# See https://gitlab.ubiservices.ubi.com/ubiservices/public-libraries/nodejs/ubiservices-eslint/eslint-plugin
+# Values: 0=off, 1=warning, 2=error
+root: true
+extends:
+  - "plugin:@ubiservices-eslint/webService"
+rules:
+  "@typescript-eslint/no-floating-promises": ["warn"]
+  "@typescript-eslint/unbound-method": "off"
+  "@typescript-eslint/array-type": "off"
+  "@typescript-eslint/no-extra-parens": "off"
+  "@typescript-eslint/no-extraneous-class": "off"
+  "@typescript-eslint/no-var-requires": "off"
+  "@typescript-eslint/ban-ts-ignore": "off"
+  "@typescript-eslint/no-use-before-define": "off"
+  "@typescript-eslint/naming-convention": "off"
+  "@typescript-eslint/consistent-indexed-object-style": "off"
+  "@typescript-eslint/ban-types":
+    - "error"
+    - types:
+        Object: false
+        object: false
+        Function: false
+      extendDefaults: true
+  "@typescript-eslint/no-empty-interface":
+    - off
+  "@typescript-eslint/max-classes-per-file":
+    - off
+  "@typescript-eslint/no-unused-vars":
+    - warn
+    - argsIgnorePattern: "^_"
+  no-unused-vars: off
+  array-bracket-spacing:
+    - off
+  semi:
+    - error
+    - always
+  no-return-assign:
+    - off
+  no-extra-semi:
+    - error
+  no-magic-numbers:
+    - error
+    - ignore: [1, -1, 0]
+      ignoreDefaultValues: true
+  no-sequences:
+    - error
+  no-use-before-define:
+    - off
+  no-cond-assign:
+    - error
+  no-extraneous-class:
+    - off
+  valid-jsdoc:
+    - error
+    - requireReturn: true
+      requireParamDescription: true
+      requireParamType: true
+      requireReturnDescription: true
+  no-unused-expressions:
+    - error
+  no-constant-condition:
+    - error
+  prefer-arrow-callback:
+    - error
+  eqeqeq:
+    - error
+    - always
+  prefer-const:
+    - error
+  no-tabs:
+    - error
+  indent: off
+  "@typescript-eslint/indent":
+    - error
+    - 2
+    - SwitchCase: 1
+      MemberExpression: 1
+      CallExpression:
+        arguments: "first"
+      FunctionDeclaration:
+        parameters: "first"
+        body: 1
+      FunctionExpression:
+        parameters: "first"
+        body: 1
+  object-curly-spacing:
+    - error
+    - always
+  curly:
+    - error
+    - multi-line
+  one-var-declaration-per-line:
+    - error
+    - initializations
+  quote-props:
+    - error
+    - as-needed
+  space-in-parens:
+    - error
+    - never
+  arrow-parens:
+    - error
+    - always
+  max-len:
+    - error
+    - code: 140
+      comments: 120
+      ignoreTemplateLiterals: true
+      ignoreUrls: true
+  no-multi-spaces:
+    - error
+  brace-style:
+    - error
+    - 1tbs
+    - allowSingleLine: true
+  no-trailing-spaces:
+    - error
+  spaced-comment:
+    - error
+    - always
+  interface-name:
+    - 0
+  no-namespace:
+    - 0
+  quotes:
+    - error
+    - single
+  no-multiple-empty-lines:
+    - error
+    - max: 2
+      maxEOF: 0
+  comma-dangle:
+    - error
+    - never
+  no-shadow:
+    - 0
+  no-empty:
+    - error
+    - allowEmptyCatch: true
+  no-label-var:
+    - error
+  implicit-arrow-linebreak:
+    - error
+    - beside
