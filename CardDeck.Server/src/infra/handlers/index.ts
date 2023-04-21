@@ -1,1 +1,1 @@
-export * from './gameplay-socket-handler';
+export * from './card-socket-handler';

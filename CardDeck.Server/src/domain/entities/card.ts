@@ -1,5 +1,7 @@
+import { Ability } from './ability';
+
 export interface Card {
+  id: string;
   name: string;
-  power: number;
-  specialAttack: string;
+  abilities: Ability[];
 }

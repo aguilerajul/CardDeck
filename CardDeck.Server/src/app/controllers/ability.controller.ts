@@ -1,0 +1,1 @@
+// Will contain the abilities that can be set to the cards

@@ -1,1 +1,1 @@
-export * from './gameplay-service';
+export * from './card-service';
