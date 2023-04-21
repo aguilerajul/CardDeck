@@ -3,9 +3,9 @@ import { DefaultEventsMap } from 'socket.io/dist/typed-events';
 import { SocketInterface } from '../../domain/intefaces';
 
 
-export class GamePlaySocketHandler implements SocketInterface {
+export class CardSocketHandler implements SocketInterface {
   handleConnection(socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>): void {
-    socket.emit('card', 'I\'m playing this card');
+    socket.emit('card', 'I created this card');
   }
 
   middlewareImplementation?(socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>, next: any): void {
