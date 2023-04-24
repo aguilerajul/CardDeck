@@ -2,12 +2,14 @@ import { JsonController, Post, Get, Body, Param } from 'routing-controllers';
 import { CardService } from '../../libs/services';
 import { Card } from '../../domain/entities';
 import * as httpStatus from 'http-status';
-import { Service } from 'typedi';
+import { Container, Service } from 'typedi';
 
 @Service()
 @JsonController('/cards', { transformResponse: true })
 export class CardsController {
-  constructor(private readonly cardService: CardService) { }
+  constructor(private readonly cardService: CardService) { 
+    this.cardService = Container.get(CardService);
+  }
 
   @Post('/')
   post(@Body() card: Card) {
