@@ -1,2 +1,2 @@
 # CardDeck
-Project to test socket.io and nodejs
+Project to test socket.io, DDD and nodejs with TypeScript
